@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f0f0f0;
+    margin: 20px;
+  }
+  
+  #board {
+    margin: 20px auto;
+    width: 768px; /* 16 squares * 48px */
+    height: 576px; /* 12 squares * 48px */
+    display: grid;
+    grid-template-columns: repeat(16, 48px);
+    grid-template-rows: repeat(12, 48px);
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .square {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  
+  .square.light {
+    background-color: #f9f9d1;
+  }
+  
+  .square.dark {
+    background-color: #6b8e23;
+  }
+  
+  .square.highlight {
+    outline: 3px solid yellow;
+    background-color: #fffa90 !important;
+  }
+  
+  .piece {
+    pointer-events: none;
+  }
+  
